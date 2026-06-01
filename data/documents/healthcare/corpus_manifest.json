@@ -1,0 +1,332 @@
+[
+  {
+    "document_id": "HC-01",
+    "filename": "hc_01_type_2_diabetes_management.txt",
+    "title": "Type 2 Diabetes Management",
+    "category": "Endocrinology"
+  },
+  {
+    "document_id": "HC-02",
+    "filename": "hc_02_hypertension_clinical_guidelines.txt",
+    "title": "Hypertension Clinical Guidelines",
+    "category": "Cardiology"
+  },
+  {
+    "document_id": "HC-03",
+    "filename": "hc_03_childhood_immunization_schedule.txt",
+    "title": "Childhood Immunization Schedule",
+    "category": "Pediatrics"
+  },
+  {
+    "document_id": "HC-04",
+    "filename": "hc_04_asthma_action_plan_basics.txt",
+    "title": "Asthma Action Plan Basics",
+    "category": "Pulmonology"
+  },
+  {
+    "document_id": "HC-05",
+    "filename": "hc_05_antibiotic_stewardship_in_primary_care.txt",
+    "title": "Antibiotic Stewardship in Primary Care",
+    "category": "Infectious Disease"
+  },
+  {
+    "document_id": "HC-06",
+    "filename": "hc_06_postoperative_pain_control.txt",
+    "title": "Postoperative Pain Control",
+    "category": "Anesthesiology"
+  },
+  {
+    "document_id": "HC-07",
+    "filename": "hc_07_heart_failure_with_reduced_ejection_frac.txt",
+    "title": "Heart Failure with Reduced Ejection Fraction",
+    "category": "Cardiology"
+  },
+  {
+    "document_id": "HC-08",
+    "filename": "hc_08_chronic_kidney_disease_staging.txt",
+    "title": "Chronic Kidney Disease Staging",
+    "category": "Nephrology"
+  },
+  {
+    "document_id": "HC-09",
+    "filename": "hc_09_major_depressive_disorder_screening.txt",
+    "title": "Major Depressive Disorder Screening",
+    "category": "Psychiatry"
+  },
+  {
+    "document_id": "HC-10",
+    "filename": "hc_10_osteoporosis_prevention_in_older_adults.txt",
+    "title": "Osteoporosis Prevention in Older Adults",
+    "category": "Geriatrics"
+  },
+  {
+    "document_id": "HC-11",
+    "filename": "hc_11_migraine_acute_treatment_options.txt",
+    "title": "Migraine Acute Treatment Options",
+    "category": "Neurology"
+  },
+  {
+    "document_id": "HC-12",
+    "filename": "hc_12_prenatal_folic_acid_supplementation.txt",
+    "title": "Prenatal Folic Acid Supplementation",
+    "category": "Obstetrics"
+  },
+  {
+    "document_id": "HC-13",
+    "filename": "hc_13_community_acquired_pneumonia_treatment.txt",
+    "title": "Community Acquired Pneumonia Treatment",
+    "category": "Pulmonology"
+  },
+  {
+    "document_id": "HC-14",
+    "filename": "hc_14_rheumatoid_arthritis_first-line_therapy.txt",
+    "title": "Rheumatoid Arthritis First-Line Therapy",
+    "category": "Rheumatology"
+  },
+  {
+    "document_id": "HC-15",
+    "filename": "hc_15_pediatric_fever_without_source.txt",
+    "title": "Pediatric Fever Without Source",
+    "category": "Pediatrics"
+  },
+  {
+    "document_id": "HC-16",
+    "filename": "hc_16_atrial_fibrillation_stroke_prevention.txt",
+    "title": "Atrial Fibrillation Stroke Prevention",
+    "category": "Cardiology"
+  },
+  {
+    "document_id": "HC-17",
+    "filename": "hc_17_copd_exacerbation_management.txt",
+    "title": "COPD Exacerbation Management",
+    "category": "Pulmonology"
+  },
+  {
+    "document_id": "HC-18",
+    "filename": "hc_18_iron_deficiency_anemia_workup.txt",
+    "title": "Iron Deficiency Anemia Workup",
+    "category": "Hematology"
+  },
+  {
+    "document_id": "HC-19",
+    "filename": "hc_19_generalized_anxiety_disorder_treatment.txt",
+    "title": "Generalized Anxiety Disorder Treatment",
+    "category": "Psychiatry"
+  },
+  {
+    "document_id": "HC-20",
+    "filename": "hc_20_gestational_diabetes_screening.txt",
+    "title": "Gestational Diabetes Screening",
+    "category": "Obstetrics"
+  },
+  {
+    "document_id": "HC-21",
+    "filename": "hc_21_hepatitis_c_screening_recommendations.txt",
+    "title": "Hepatitis C Screening Recommendations",
+    "category": "Gastroenterology"
+  },
+  {
+    "document_id": "HC-22",
+    "filename": "hc_22_hypothyroidism_levothyroxine_dosing.txt",
+    "title": "Hypothyroidism Levothyroxine Dosing",
+    "category": "Endocrinology"
+  },
+  {
+    "document_id": "HC-23",
+    "filename": "hc_23_sepsis_early_recognition_bundle.txt",
+    "title": "Sepsis Early Recognition Bundle",
+    "category": "Critical Care"
+  },
+  {
+    "document_id": "HC-24",
+    "filename": "hc_24_low_back_pain_non-surgical_care.txt",
+    "title": "Low Back Pain Non-Surgical Care",
+    "category": "Orthopedics"
+  },
+  {
+    "document_id": "HC-25",
+    "filename": "hc_25_breast_cancer_screening_mammography.txt",
+    "title": "Breast Cancer Screening Mammography",
+    "category": "Oncology"
+  },
+  {
+    "document_id": "HC-26",
+    "filename": "hc_26_colorectal_cancer_screening_options.txt",
+    "title": "Colorectal Cancer Screening Options",
+    "category": "Gastroenterology"
+  },
+  {
+    "document_id": "HC-27",
+    "filename": "hc_27_pediatric_asthma_controller_therapy.txt",
+    "title": "Pediatric Asthma Controller Therapy",
+    "category": "Pediatrics"
+  },
+  {
+    "document_id": "HC-28",
+    "filename": "hc_28_dyslipidemia_statin_indications.txt",
+    "title": "Dyslipidemia Statin Indications",
+    "category": "Cardiology"
+  },
+  {
+    "document_id": "HC-29",
+    "filename": "hc_29_urinary_tract_infection_empiric_therapy.txt",
+    "title": "Urinary Tract Infection Empiric Therapy",
+    "category": "Urology"
+  },
+  {
+    "document_id": "HC-30",
+    "filename": "hc_30_acute_coronary_syndrome_initial_care.txt",
+    "title": "Acute Coronary Syndrome Initial Care",
+    "category": "Emergency Medicine"
+  },
+  {
+    "document_id": "HC-31",
+    "filename": "hc_31_stroke_thrombolysis_eligibility.txt",
+    "title": "Stroke Thrombolysis Eligibility",
+    "category": "Neurology"
+  },
+  {
+    "document_id": "HC-32",
+    "filename": "hc_32_pediatric_dehydration_oral_rehydration.txt",
+    "title": "Pediatric Dehydration Oral Rehydration",
+    "category": "Pediatrics"
+  },
+  {
+    "document_id": "HC-33",
+    "filename": "hc_33_contraception_counseling_overview.txt",
+    "title": "Contraception Counseling Overview",
+    "category": "Reproductive Health"
+  },
+  {
+    "document_id": "HC-34",
+    "filename": "hc_34_sleep_apnea_diagnosis_pathway.txt",
+    "title": "Sleep Apnea Diagnosis Pathway",
+    "category": "Sleep Medicine"
+  },
+  {
+    "document_id": "HC-35",
+    "filename": "hc_35_celiac_disease_serologic_testing.txt",
+    "title": "Celiac Disease Serologic Testing",
+    "category": "Gastroenterology"
+  },
+  {
+    "document_id": "HC-36",
+    "filename": "hc_36_gout_acute_flare_management.txt",
+    "title": "Gout Acute Flare Management",
+    "category": "Rheumatology"
+  },
+  {
+    "document_id": "HC-37",
+    "filename": "hc_37_attention_deficit_hyperactivity_disorder.txt",
+    "title": "Attention Deficit Hyperactivity Disorder",
+    "category": "Psychiatry"
+  },
+  {
+    "document_id": "HC-38",
+    "filename": "hc_38_influenza_vaccination_high-risk_groups.txt",
+    "title": "Influenza Vaccination High-Risk Groups",
+    "category": "Preventive Medicine"
+  },
+  {
+    "document_id": "HC-39",
+    "filename": "hc_39_pressure_injury_prevention_in_hospitals.txt",
+    "title": "Pressure Injury Prevention in Hospitals",
+    "category": "Nursing"
+  },
+  {
+    "document_id": "HC-40",
+    "filename": "hc_40_opioid_use_disorder_buprenorphine.txt",
+    "title": "Opioid Use Disorder Buprenorphine",
+    "category": "Addiction Medicine"
+  },
+  {
+    "document_id": "HC-41",
+    "filename": "hc_41_eczema_topical_treatment_ladder.txt",
+    "title": "Eczema Topical Treatment Ladder",
+    "category": "Dermatology"
+  },
+  {
+    "document_id": "HC-42",
+    "filename": "hc_42_glaucoma_first-line_eye_drops.txt",
+    "title": "Glaucoma First-Line Eye Drops",
+    "category": "Ophthalmology"
+  },
+  {
+    "document_id": "HC-43",
+    "filename": "hc_43_hiv_pre-exposure_prophylaxis_prep.txt",
+    "title": "HIV Pre-Exposure Prophylaxis PrEP",
+    "category": "Infectious Disease"
+  },
+  {
+    "document_id": "HC-44",
+    "filename": "hc_44_palliative_dyspnea_symptom_relief.txt",
+    "title": "Palliative Dyspnea Symptom Relief",
+    "category": "Palliative Care"
+  },
+  {
+    "document_id": "HC-45",
+    "filename": "hc_45_food_allergy_anaphylaxis_epinephrine.txt",
+    "title": "Food Allergy Anaphylaxis Epinephrine",
+    "category": "Allergy"
+  },
+  {
+    "document_id": "HC-46",
+    "filename": "hc_46_venous_thromboembolism_prophylaxis.txt",
+    "title": "Venous Thromboembolism Prophylaxis",
+    "category": "Hematology"
+  },
+  {
+    "document_id": "HC-47",
+    "filename": "hc_47_alcohol_withdrawal_ciwa_protocol.txt",
+    "title": "Alcohol Withdrawal CIWA Protocol",
+    "category": "Addiction Medicine"
+  },
+  {
+    "document_id": "HC-48",
+    "filename": "hc_48_thyroid_nodule_evaluation_steps.txt",
+    "title": "Thyroid Nodule Evaluation Steps",
+    "category": "Endocrinology"
+  },
+  {
+    "document_id": "HC-49",
+    "filename": "hc_49_pelvic_inflammatory_disease_treatment.txt",
+    "title": "Pelvic Inflammatory Disease Treatment",
+    "category": "Gynecology"
+  },
+  {
+    "document_id": "HC-50",
+    "filename": "hc_50_vitamin_d_deficiency_replacement.txt",
+    "title": "Vitamin D Deficiency Replacement",
+    "category": "Primary Care"
+  },
+  {
+    "document_id": "HC-51",
+    "filename": "hc_51_acute_otitis_media_in_children.txt",
+    "title": "Acute Otitis Media in Children",
+    "category": "ENT"
+  },
+  {
+    "document_id": "HC-52",
+    "filename": "hc_52_parkinson_disease_motor_symptoms.txt",
+    "title": "Parkinson Disease Motor Symptoms",
+    "category": "Neurology"
+  },
+  {
+    "document_id": "HC-53",
+    "filename": "hc_53_burn_wound_initial_emergency_care.txt",
+    "title": "Burn Wound Initial Emergency Care",
+    "category": "Emergency Medicine"
+  },
+  {
+    "document_id": "HC-54",
+    "filename": "hc_54_chronic_hepatitis_b_monitoring.txt",
+    "title": "Chronic Hepatitis B Monitoring",
+    "category": "Gastroenterology"
+  },
+  {
+    "document_id": "HC-55",
+    "filename": "hc_55_fall_prevention_in_older_adults.txt",
+    "title": "Fall Prevention in Older Adults",
+    "category": "Geriatrics"
+  }
+]

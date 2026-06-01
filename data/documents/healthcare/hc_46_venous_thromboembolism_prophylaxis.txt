@@ -1,0 +1,28 @@
+Healthcare Knowledge Base Document
+Document ID: HC-46
+Title: Venous Thromboembolism Prophylaxis
+Category: Hematology
+Domain: Healthcare / Clinical Reference
+
+Overview
+This clinical reference summarizes evidence-informed guidance for venous thromboembolism prophylaxis used in hospital and primary-care settings. Content is intended for clinician education and patient counseling support within a retrieval-augmented healthcare assistant.
+
+Key Clinical Points
+- Patients presenting with concerns related to venous thromboembolism prophylaxis should receive structured assessment including history, focused examination, and appropriate diagnostics.
+- First-line management should follow specialty consensus where available, with attention to comorbidities, renal function, hepatic function, pregnancy status, and drug interactions.
+- Red-flag symptoms requiring urgent escalation include sudden severe pain, neurologic deficits, respiratory distress, hemodynamic instability, altered mental status, and signs of sepsis.
+
+Diagnostic Considerations
+Clinicians should document onset, duration, severity, triggers, prior episodes, medication adherence, allergies, and social determinants of health. Laboratory and imaging decisions should be guided by pretest probability and shared decision-making.
+
+Treatment and Monitoring
+Treatment plans should specify medication name, dose, route, frequency, duration, monitoring labs, and follow-up interval. Non-pharmacologic interventions such as lifestyle counseling, physical therapy, vaccination, or care coordination should be included when relevant to hematology care pathways.
+
+Patient Counseling
+Explain expected benefits, common adverse effects, warning signs that require immediate care, and adherence strategies. Provide written instructions when feasible and confirm health literacy using teach-back methods.
+
+Quality and Safety
+Verify allergy status before prescribing antibiotics or contrast agents. Use weight-based dosing in pediatrics. Reconcile medications at every visit. Document shared decisions for screening and preventive services.
+
+Documentation Keywords
+Venous Thromboembolism Prophylaxis; Hematology; clinical guideline; patient education; monitoring; contraindications; follow-up; healthcare RAG corpus HC-46.

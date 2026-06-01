@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "naive-rag-system"
+version = "0.1.0"
+description = "Production-ready RAG system with FAISS, Chroma, LangChain, OpenAI, Groq, and LangSmith tracing."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "faiss-cpu>=1.8.0",
+    "chromadb>=1.0.0",
+    "fastapi>=0.115.0",
+    "langchain>=0.2.16",
+    "langchain-chroma>=0.2.0",
+    "langchain-community>=0.2.16",
+    "langchain-core>=0.2.38",
+    "langchain-groq>=0.2.0",
+    "langchain-openai>=0.1.23",
+    "langchain-text-splitters>=0.2.4",
+    "langsmith>=0.1.95",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.9",
+    "PyYAML>=6.0.1",
+    "pypdf>=4.2.0",
+    "typer>=0.12.3",
+    "uvicorn[standard]>=0.30.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0",
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+]
+
+[project.scripts]
+rag = "rag_app.cli:app"
+rag-api = "rag_app.api:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_unused_ignores = true
+ignore_missing_imports = true

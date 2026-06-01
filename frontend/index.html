@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Healthcare RAG Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#chatMessages">Skip to chat</a>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Settings and corpus">
+        <header class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <i data-lucide="heart-pulse"></i>
+          </div>
+          <div class="brand-text">
+            <h1 id="assistantTitle">Healthcare RAG</h1>
+            <div class="status-badge" id="statusBadge">
+              <span class="status-dot" id="statusDot"></span>
+              <span id="connectionStatus">Connecting…</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="card corpus-card">
+          <div class="card-header">
+            <div class="card-title">
+              <i data-lucide="library"></i>
+              <h2>Knowledge base</h2>
+            </div>
+            <button id="refreshButton" class="icon-btn" type="button" title="Refresh status" aria-label="Refresh status">
+              <i data-lucide="refresh-cw"></i>
+            </button>
+          </div>
+          <p class="card-desc">55+ clinical documents indexed on the server. Chat only — no uploads.</p>
+          <div class="metric-row">
+            <div class="metric">
+              <span class="metric-label">Documents</span>
+              <strong id="documentCount">—</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Index</span>
+              <strong id="indexState" class="metric-value">—</strong>
+            </div>
+          </div>
+          <div id="uploadSection" hidden>
+            <input id="fileInput" type="file" accept=".pdf,.txt,.json" multiple />
+            <button id="indexButton" class="btn btn-secondary btn-block" type="button">Index documents</button>
+          </div>
+        </section>
+
+        <details class="card collapsible" open>
+          <summary class="card-header clickable">
+            <div class="card-title">
+              <i data-lucide="sliders-horizontal"></i>
+              <h2>Retrieval tools</h2>
+            </div>
+            <i data-lucide="chevron-down" class="chevron"></i>
+          </summary>
+          <div class="card-body">
+            <p class="field-label">Strategy</p>
+            <div class="mode-grid" id="modeGrid" role="radiogroup" aria-label="Retrieval strategy">
+              <button type="button" class="mode-chip" data-ui-mode="standard" data-mode="naive" title="Direct semantic search">
+                <span>Standard</span>
+              </button>
+              <button type="button" class="mode-chip is-active" data-ui-mode="adaptive" data-mode="adaptive" title="Auto-route by query">
+                <span>Adaptive</span>
+              </button>
+              <button type="button" class="mode-chip" data-ui-mode="advanced" data-mode="advanced" title="Rerank and diversify">
+                <span>Advanced</span>
+              </button>
+              <button type="button" class="mode-chip" data-ui-mode="corrective" data-mode="corrective" title="Rewrite weak queries">
+                <span>Corrective</span>
+              </button>
+            </div>
+
+            <p class="field-label">Enhancements</p>
+            <div class="toggle-row">
+              <button type="button" class="toggle-chip is-on" id="toggleHybrid">
+                <i data-lucide="blend"></i> Hybrid
+              </button>
+              <button type="button" class="toggle-chip is-on" id="toggleRerank">
+                <i data-lucide="arrow-up-down"></i> Rerank
+              </button>
+              <button type="button" class="toggle-chip is-on" id="toggleExpand">
+                <i data-lucide="maximize-2"></i> Expand
+              </button>
+            </div>
+
+            <p class="field-label">Parameters</p>
+            <div class="param-grid">
+              <label class="param-field">
+                <span>Top K</span>
+                <input id="topKInput" type="number" min="1" max="20" value="5" />
+              </label>
+              <label class="param-field">
+                <span>Pool</span>
+                <input id="poolInput" type="number" min="5" max="200" value="40" />
+              </label>
+              <label class="param-field">
+                <span>Min score</span>
+                <input id="minInput" type="number" min="0" max="1" step="0.05" value="0.1" />
+              </label>
+            </div>
+          </div>
+        </details>
+
+        <details class="card collapsible">
+          <summary class="card-header clickable">
+            <div class="card-title">
+              <i data-lucide="scan-search"></i>
+              <h2>Retrieval debugger</h2>
+            </div>
+            <i data-lucide="chevron-down" class="chevron"></i>
+          </summary>
+          <div class="card-body">
+            <p id="debuggerQuery" class="debugger-line">Waiting for a query…</p>
+            <div class="debugger-metrics">
+              <div class="mini-metric"><span>Mode</span><strong id="debuggerMode">adaptive</strong></div>
+              <div class="mini-metric"><span>Top K</span><strong id="debuggerTopK">5</strong></div>
+              <div class="mini-metric"><span>Pool</span><strong id="debuggerPool">40</strong></div>
+            </div>
+            <div class="pill-row" id="featurePills">
+              <span class="status-pill is-on" data-pill="hybrid">Hybrid</span>
+              <span class="status-pill is-on" data-pill="rerank">Rerank</span>
+              <span class="status-pill is-on" data-pill="expand">Expansion</span>
+            </div>
+            <div id="chunkScores" class="score-list"></div>
+          </div>
+        </details>
+
+        <details class="card collapsible runtime-card">
+          <summary class="card-header clickable">
+            <div class="card-title">
+              <i data-lucide="cpu"></i>
+              <h2>Runtime</h2>
+            </div>
+            <i data-lucide="chevron-down" class="chevron"></i>
+          </summary>
+          <div class="card-body runtime-list">
+            <div><span>Embeddings</span><code id="embeddingModel">—</code></div>
+            <div><span>LLM</span><code id="llmModel">—</code></div>
+            <div><span>Tracing</span><code id="traceProject">—</code></div>
+          </div>
+        </details>
+
+        <input type="hidden" id="retrievalModeInput" value="adaptive" />
+      </aside>
+
+      <section class="main" aria-label="Chat workspace">
+        <div id="alertArea" class="toast" hidden role="alert"></div>
+
+        <div class="main-grid">
+          <section class="chat-card">
+            <header class="chat-header">
+              <div>
+                <h2>Clinical assistant</h2>
+                <p class="chat-subtitle">Answers grounded in your indexed healthcare corpus</p>
+              </div>
+              <div class="chat-meta">
+                <span id="latencyLabel" class="latency-chip"></span>
+                <button id="clearChatButton" class="btn btn-ghost btn-sm" type="button" title="Clear conversation">
+                  <i data-lucide="trash-2"></i>
+                  Clear
+                </button>
+              </div>
+            </header>
+
+            <div id="chatMessages" class="chat-thread" tabindex="0"></div>
+
+            <div class="composer">
+              <div id="suggestedQuestions" class="suggestions"></div>
+              <div class="composer-box">
+                <textarea
+                  id="questionInput"
+                  rows="1"
+                  placeholder="Ask about screening, treatment, prevention…"
+                  aria-label="Your question"
+                ></textarea>
+                <button id="askButton" class="btn btn-primary btn-send" type="button" aria-label="Send message">
+                  <i data-lucide="arrow-up"></i>
+                </button>
+              </div>
+              <p class="composer-hint">
+                <kbd>Enter</kbd> to send · <kbd>Shift</kbd>+<kbd>Enter</kbd> new line · Not medical advice
+              </p>
+            </div>
+          </section>
+
+          <aside class="sources-card" aria-label="Retrieved sources">
+            <header class="sources-header">
+              <h2>Evidence</h2>
+              <span id="sourceCount" class="count-badge">0 sources</span>
+            </header>
+            <p id="rewrittenQueryLabel" class="rewrite-banner" hidden></p>
+            <div id="sourcesList" class="sources-scroll">
+              <div class="empty-sources">
+                <i data-lucide="file-search"></i>
+                <p>Retrieved passages will appear here after you ask a question.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

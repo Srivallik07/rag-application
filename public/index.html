@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAG Application</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">R</div>
+          <div>
+            <h1>RAG Chatbot</h1>
+            <p id="connectionStatus">Connecting...</p>
+          </div>
+        </div>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <h2>Documents</h2>
+            <button id="refreshButton" class="icon-button" title="Refresh status" type="button">
+              <i data-lucide="refresh-cw"></i>
+            </button>
+          </div>
+          <label class="upload-zone" for="fileInput">
+            <i data-lucide="upload-cloud"></i>
+            <span>Upload PDF, TXT, JSON</span>
+          </label>
+          <input id="fileInput" type="file" accept=".pdf,.txt,.json" multiple />
+          <button id="indexButton" class="primary-button" type="button">
+            <i data-lucide="database"></i>
+            Index documents
+          </button>
+          <div class="status-grid">
+            <div>
+              <span>Files</span>
+              <strong id="documentCount">0</strong>
+            </div>
+            <div>
+              <span>Index</span>
+              <strong id="indexState">No</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel compact">
+          <h2>Runtime</h2>
+          <dl>
+            <div><dt>Embeddings</dt><dd id="embeddingModel">-</dd></div>
+            <div><dt>LLM</dt><dd id="llmModel">-</dd></div>
+            <div><dt>Tracing</dt><dd id="traceProject">-</dd></div>
+          </dl>
+        </section>
+      </aside>
+
+      <section class="workspace">
+        <div id="alertArea" class="alert" hidden></div>
+
+        <section class="chat-panel">
+          <div class="section-heading">
+            <h2>Chat</h2>
+            <span id="latencyLabel"></span>
+          </div>
+          <div id="chatMessages" class="chat-messages"></div>
+          <div class="query-bar">
+            <textarea id="questionInput" rows="2" placeholder="Ask a question about your documents"></textarea>
+            <div class="query-controls">
+              <button id="clearChatButton" class="secondary-button" type="button">
+                <i data-lucide="trash-2"></i>
+                Clear
+              </button>
+              <label for="topKInput">Top K</label>
+              <input id="topKInput" type="number" min="1" max="20" value="5" />
+              <label for="retrievalModeInput">Mode</label>
+              <select id="retrievalModeInput">
+                <option value="naive">Naive</option>
+                <option value="advanced">Advanced</option>
+                <option value="corrective">Corrective</option>
+              </select>
+              <button id="askButton" class="primary-button" type="button">
+                <i data-lucide="send"></i>
+                Send
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="sources-panel">
+          <div class="section-heading">
+            <h2>Sources</h2>
+            <span id="sourceCount">0 retrieved</span>
+          </div>
+          <div id="sourcesList" class="sources-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

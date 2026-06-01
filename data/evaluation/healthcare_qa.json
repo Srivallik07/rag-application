@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What is the first-line therapy topic for rheumatoid arthritis in this corpus?",
+    "expected_doc_hint": "hc_14",
+    "expected_keywords": ["rheumatoid", "first-line", "methotrexate", "therapy"]
+  },
+  {
+    "question": "How should childhood immunization schedules be documented?",
+    "expected_doc_hint": "hc_03",
+    "expected_keywords": ["immunization", "pediatric", "vaccination", "schedule"]
+  },
+  {
+    "question": "What monitoring is mentioned for chronic kidney disease staging?",
+    "expected_doc_hint": "hc_08",
+    "expected_keywords": ["kidney", "staging", "monitoring", "renal"]
+  },
+  {
+    "question": "What are red-flag symptoms that require urgent escalation?",
+    "expected_doc_hint": "hc_",
+    "expected_keywords": ["red-flag", "respiratory distress", "sepsis", "urgent"]
+  },
+  {
+    "question": "What does the corpus say about gestational diabetes screening?",
+    "expected_doc_hint": "hc_20",
+    "expected_keywords": ["gestational", "diabetes", "screening", "pregnancy"]
+  },
+  {
+    "question": "What guidance is provided for asthma action plans?",
+    "expected_doc_hint": "hc_04",
+    "expected_keywords": ["asthma", "action plan", "inhaler", "pulmonology"]
+  },
+  {
+    "question": "What is recommended for HIV pre-exposure prophylaxis?",
+    "expected_doc_hint": "hc_43",
+    "expected_keywords": ["HIV", "PrEP", "pre-exposure", "prophylaxis"]
+  },
+  {
+    "question": "How should postoperative pain control be approached?",
+    "expected_doc_hint": "hc_06",
+    "expected_keywords": ["postoperative", "pain", "multimodal", "analgesia"]
+  },
+  {
+    "question": "What stroke treatment eligibility factors are documented?",
+    "expected_doc_hint": "hc_31",
+    "expected_keywords": ["stroke", "thrombolysis", "neurologic", "time window"]
+  },
+  {
+    "question": "What patient counseling steps are listed for clinical documents?",
+    "expected_doc_hint": "hc_",
+    "expected_keywords": ["patient counseling", "adherence", "teach-back", "adverse effects"]
+  },
+  {
+    "question": "What is covered about atrial fibrillation stroke prevention?",
+    "expected_doc_hint": "hc_16",
+    "expected_keywords": ["atrial fibrillation", "stroke", "anticoagulation", "prevention"]
+  },
+  {
+    "question": "What does the document on sepsis early recognition include?",
+    "expected_doc_hint": "hc_23",
+    "expected_keywords": ["sepsis", "early recognition", "bundle", "critical"]
+  },
+  {
+    "question": "What vitamin D guidance appears in the healthcare corpus?",
+    "expected_doc_hint": "hc_50",
+    "expected_keywords": ["vitamin D", "deficiency", "replacement", "supplementation"]
+  },
+  {
+    "question": "What is documented about food allergy anaphylaxis treatment?",
+    "expected_doc_hint": "hc_45",
+    "expected_keywords": ["anaphylaxis", "epinephrine", "food allergy", "allergy"]
+  },
+  {
+    "question": "What fall prevention strategies are described for older adults?",
+    "expected_doc_hint": "hc_55",
+    "expected_keywords": ["fall prevention", "older adults", "geriatrics", "home safety"]
+  }
+]

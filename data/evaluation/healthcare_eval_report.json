@@ -1,0 +1,146 @@
+{
+  "domain": "healthcare",
+  "documents_indexed": 55,
+  "questions_evaluated": 15,
+  "retrieval_accuracy": 1.0,
+  "mean_keyword_score": 0.75,
+  "citation_rate": 1.0,
+  "composite_quality_score": 0.875,
+  "results": [
+    {
+      "question": "What is the first-line therapy topic for rheumatoid arthritis in this corpus?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "The first-line therapy topic for rheumatoid arthritis in this corpus is discussed in the document \"Rheumatoid Arthritis First-Line Therapy\" [source:1]. This document provides evidence-informed guidance for rheumatoid arthritis first-line therapy, including treatment plans, non-ph",
+      "top_source": "data\\documents\\healthcare\\hc_14_rheumatoid_arthritis_first-line_therapy.txt",
+      "latency_ms": 1746.71
+    },
+    {
+      "question": "How should childhood immunization schedules be documented?",
+      "retrieval_hit": true,
+      "keyword_score": 0.5,
+      "citation_score": 1.0,
+      "answer_preview": "The indexed healthcare documents do not contain enough information on how childhood immunization schedules should be documented. While [source:2] provides an overview of the childhood immunization schedule, it does not provide specific guidance on documentation. The other retriev",
+      "top_source": "data\\documents\\healthcare\\hc_03_childhood_immunization_schedule.txt",
+      "latency_ms": 987.38
+    },
+    {
+      "question": "What monitoring is mentioned for chronic kidney disease staging?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "For chronic kidney disease staging, monitoring is mentioned in the context of treatment plans, which should specify \"monitoring labs\" and \"follow-up interval\" [source:2]. This suggests that laboratory tests and regular follow-up appointments are important components of monitoring",
+      "top_source": "data\\documents\\healthcare\\hc_08_chronic_kidney_disease_staging.txt",
+      "latency_ms": 729.41
+    },
+    {
+      "question": "What are red-flag symptoms that require urgent escalation?",
+      "retrieval_hit": true,
+      "keyword_score": 1.0,
+      "citation_score": 1.0,
+      "answer_preview": "Red-flag symptoms that require urgent escalation include: \n1. Sudden severe pain\n2. Neurologic deficits\n3. Respiratory distress\n4. Hemodynamic instability\n5. Altered mental status\n6. Signs of sepsis.\n\nThese symptoms are consistently mentioned across multiple documents, including ",
+      "top_source": "data\\documents\\healthcare\\hc_01_type_2_diabetes_management.txt",
+      "latency_ms": 919.42
+    },
+    {
+      "question": "What does the corpus say about gestational diabetes screening?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "The corpus provides information on gestational diabetes screening in the context of obstetrics care pathways. According to [source:1], gestational diabetes screening is mentioned as a part of documentation keywords, along with patient education, monitoring, and follow-up. \n\nAddit",
+      "top_source": "data\\documents\\healthcare\\hc_20_gestational_diabetes_screening.txt",
+      "latency_ms": 918.18
+    },
+    {
+      "question": "What guidance is provided for asthma action plans?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "For asthma action plans, the guidance provided includes a structured assessment of patients, including history, focused examination, and appropriate diagnostics [source:1]. First-line management should follow specialty consensus, taking into account comorbidities, renal function,",
+      "top_source": "data\\documents\\healthcare\\hc_04_asthma_action_plan_basics.txt",
+      "latency_ms": 9987.23
+    },
+    {
+      "question": "What is recommended for HIV pre-exposure prophylaxis?",
+      "retrieval_hit": true,
+      "keyword_score": 1.0,
+      "citation_score": 1.0,
+      "answer_preview": "For HIV pre-exposure prophylaxis (PrEP), the recommended approach is outlined in the document \"HIV Pre-Exposure Prophylaxis PrEP\" [source:1, score:1.154846] and further detailed in [source:4, score:1.704859]. According to these clinical references, treatment plans should specify ",
+      "top_source": "data\\documents\\healthcare\\hc_43_hiv_pre-exposure_prophylaxis_prep.txt",
+      "latency_ms": 3260.29
+    },
+    {
+      "question": "How should postoperative pain control be approached?",
+      "retrieval_hit": true,
+      "keyword_score": 0.5,
+      "citation_score": 1.0,
+      "answer_preview": "Postoperative pain control should be approached with a structured assessment, including history, focused examination, and appropriate diagnostics [source:1]. First-line management should follow specialty consensus where available, taking into account comorbidities, renal function",
+      "top_source": "data\\documents\\healthcare\\hc_06_postoperative_pain_control.txt",
+      "latency_ms": 10132.25
+    },
+    {
+      "question": "What stroke treatment eligibility factors are documented?",
+      "retrieval_hit": true,
+      "keyword_score": 0.5,
+      "citation_score": 1.0,
+      "answer_preview": "The stroke treatment eligibility factors are documented in the \"Stroke Thrombolysis Eligibility\" document (HC-31) [source:1]. This document provides evidence-informed guidance for stroke thrombolysis eligibility used in hospital and primary-care settings. However, the specific el",
+      "top_source": "data\\documents\\healthcare\\hc_31_stroke_thrombolysis_eligibility.txt",
+      "latency_ms": 5027.08
+    },
+    {
+      "question": "What patient counseling steps are listed for clinical documents?",
+      "retrieval_hit": true,
+      "keyword_score": 1.0,
+      "citation_score": 1.0,
+      "answer_preview": "Patient counseling steps are listed in the document \"Thyroid Nodule Evaluation Steps\" [source:1] and also mentioned in other documents such as \"Contraception Counseling Overview\" [source:2], \"Hypertension Clinical Guidelines\" [source:3], and \"Hypothyroidism Levothyroxine Dosing\" ",
+      "top_source": "data\\documents\\healthcare\\hc_48_thyroid_nodule_evaluation_steps.txt",
+      "latency_ms": 9230.65
+    },
+    {
+      "question": "What is covered about atrial fibrillation stroke prevention?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "Atrial fibrillation stroke prevention is covered in the document \"Atrial Fibrillation Stroke Prevention\" (HC-16) [source:1] under the category of Cardiology. The document provides evidence-informed guidance for clinicians and patient counseling support. \n\nKey clinical points incl",
+      "top_source": "data\\documents\\healthcare\\hc_16_atrial_fibrillation_stroke_prevention.txt",
+      "latency_ms": 7396.61
+    },
+    {
+      "question": "What does the document on sepsis early recognition include?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "The document on sepsis early recognition, titled \"Sepsis Early Recognition Bundle\" [source:1], includes key clinical points such as:\n\n1. Structured assessment for patients presenting with sepsis concerns, including history, focused examination, and diagnostics.\n2. First-line mana",
+      "top_source": "data\\documents\\healthcare\\hc_23_sepsis_early_recognition_bundle.txt",
+      "latency_ms": 3906.38
+    },
+    {
+      "question": "What vitamin D guidance appears in the healthcare corpus?",
+      "retrieval_hit": true,
+      "keyword_score": 0.75,
+      "citation_score": 1.0,
+      "answer_preview": "Vitamin D guidance appears in the healthcare corpus in the document titled \"Vitamin D Deficiency Replacement\" (HC-50) [source:1], which is categorized under Primary Care. This document provides evidence-informed guidance for vitamin D deficiency replacement used in hospital and p",
+      "top_source": "data\\documents\\healthcare\\hc_50_vitamin_d_deficiency_replacement.txt",
+      "latency_ms": 9116.01
+    },
+    {
+      "question": "What is documented about food allergy anaphylaxis treatment?",
+      "retrieval_hit": true,
+      "keyword_score": 1.0,
+      "citation_score": 1.0,
+      "answer_preview": "According to the retrieved context from [source:1] \"Food Allergy Anaphylaxis Epinephrine\" (HC-45), treatment plans for food allergy anaphylaxis should specify medication name, dose, route, frequency, duration, monitoring labs, and follow-up interval. The document emphasizes the i",
+      "top_source": "data\\documents\\healthcare\\hc_45_food_allergy_anaphylaxis_epinephrine.txt",
+      "latency_ms": 8467.67
+    },
+    {
+      "question": "What fall prevention strategies are described for older adults?",
+      "retrieval_hit": true,
+      "keyword_score": 0.5,
+      "citation_score": 1.0,
+      "answer_preview": "The indexed healthcare documents do not contain enough information to provide specific fall prevention strategies for older adults. However, the documents suggest that fall prevention in older adults is a topic covered in the \"Fall Prevention in Older Adults\" document (HC-55) [so",
+      "top_source": "data\\documents\\healthcare\\hc_55_fall_prevention_in_older_adults.txt",
+      "latency_ms": 8122.9
+    }
+  ]
+}
