@@ -1,12 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "pip install -r requirements-vercel.txt",
-  "buildCommand": "python scripts/build_vercel_corpus.py",
+  "installCommand": "uv pip install --system -r requirements-vercel.txt -r requirements-vercel-build.txt",
+  "buildCommand": "python3 scripts/build_vercel_corpus.py",
   "outputDirectory": "public",
+  "framework": null,
   "functions": {
     "api/index.py": {
       "maxDuration": 60,
-      "excludeFiles": "{.venv/**,src/**,tests/**,logs/**,storage/**,frontend/**,data/documents/**,.pytest_cache/**,**/__pycache__/**}"
+      "includeFiles": "vercel_data/corpus.json",
+      "excludeFiles": "{.venv/**,src/**,tests/**,logs/**,storage/**,data/**,.pytest_cache/**,**/__pycache__/**}"
     }
   },
   "rewrites": [

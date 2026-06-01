@@ -22,7 +22,7 @@ from pydantic import BaseModel, Field
 
 
 MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-CORPUS_PATH = Path("vercel_data/corpus.json")
+CORPUS_PATH = Path(__file__).resolve().parent.parent / "vercel_data" / "corpus.json"
 TOKEN_RE = re.compile(r"[a-zA-Z0-9_]+")
 
 
@@ -41,6 +41,10 @@ class ChatRequest(BaseModel):
     messages: list[ChatMessage] = Field(min_length=1)
     top_k: int | None = Field(default=5, gt=0, le=20)
     retrieval_mode: Literal["naive", "advanced", "corrective", "adaptive"] | None = None
+    pool_size: int | None = Field(default=None, gt=0, le=200)
+    min_score: float | None = Field(default=None, ge=0.0, le=1.0)
+
+    model_config = {"extra": "ignore"}
 
 
 class IndexRequest(BaseModel):
@@ -65,9 +69,10 @@ def health() -> dict[str, str]:
 @app.get("/api/status")
 def status() -> dict[str, Any]:
     corpus = _load_corpus()
+    doc_count = len(corpus.get("document_files", []))
     return {
-        "documents": len(corpus.get("document_files", [])),
-        "non_empty_documents": len(corpus.get("document_files", [])),
+        "documents": doc_count,
+        "non_empty_documents": doc_count,
         "document_files": corpus.get("document_files", []),
         "index_exists": bool(corpus.get("chunks")),
         "vector_store_path": "vercel_data/corpus.json",
@@ -78,6 +83,11 @@ def status() -> dict[str, Any]:
         "llm_provider": "groq",
         "llm_model": MODEL,
         "langsmith_project": os.getenv("LANGSMITH_PROJECT", ""),
+        "domain": corpus.get("domain", "healthcare"),
+        "assistant_title": "Healthcare RAG Assistant",
+        "allow_uploads": False,
+        "min_source_documents": 50,
+        "corpus_ready": doc_count >= 50 and bool(corpus.get("chunks")),
     }
 
 
@@ -372,8 +382,10 @@ def _generate_answer(
             {
                 "role": "system",
                 "content": (
-                    "You are a factual RAG chatbot. Answer using only the retrieved context. "
-                    "If the context is insufficient, say so. Cite sources inline like [source:1]."
+                    "You are a healthcare domain RAG clinical information assistant. "
+                    "Answer only from the retrieved healthcare corpus. "
+                    "If the context is insufficient, say the indexed documents do not contain enough information. "
+                    "Do not invent facts or give personalized medical advice. Cite sources inline like [source:1]."
                 ),
             },
             {
